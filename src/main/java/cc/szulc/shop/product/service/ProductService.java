@@ -10,8 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class ProductService {
-
-    private final ProductRepository productRepository;
+     private final ProductRepository productRepository;
 
      public Page<Product> getProducts(Pageable pageable){
         return productRepository.findAll(pageable);
