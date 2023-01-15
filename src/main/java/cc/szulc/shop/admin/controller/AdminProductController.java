@@ -3,6 +3,7 @@ package cc.szulc.shop.admin.controller;
 import cc.szulc.shop.admin.controller.dto.AdminProductDto;
 import cc.szulc.shop.admin.service.AdminProductService;
 import cc.szulc.shop.admin.model.AdminProduct;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.data.domain.Page;
@@ -27,12 +28,12 @@ public class AdminProductController {
     }
 
     @PostMapping("/admin/products")
-    public AdminProduct createProduct(@RequestBody AdminProductDto adminProductDto){
+    public AdminProduct createProduct(@RequestBody @Valid AdminProductDto adminProductDto){
         return productService.createProduct(mapAdminProduct(adminProductDto, EMPTY_ID));
     }
 
     @PutMapping("/admin/products/{id}")
-    public AdminProduct updateProduct(@RequestBody AdminProductDto adminProductDto, @PathVariable Long id){
+    public AdminProduct updateProduct(@RequestBody @Valid AdminProductDto adminProductDto, @PathVariable Long id){
         return productService.updateProduct(mapAdminProduct(adminProductDto, id));
     }
 
