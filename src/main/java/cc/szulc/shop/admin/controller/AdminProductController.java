@@ -5,6 +5,7 @@ import cc.szulc.shop.admin.controller.dto.UploadResponse;
 import cc.szulc.shop.admin.service.AdminProductImageService;
 import cc.szulc.shop.admin.service.AdminProductService;
 import cc.szulc.shop.admin.model.AdminProduct;
+import com.github.slugify.Slugify;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
@@ -90,6 +91,12 @@ public class AdminProductController {
                 .price(adminProductDto.getPrice())
                 .currency(adminProductDto.getCurrency())
                 .image(adminProductDto.getImage())
+                .slug(slugifySlug(adminProductDto.getSlug()))
                 .build();
+    }
+
+    private static String slugifySlug(String slug) {
+        Slugify slugify = new Slugify();
+        return slugify.withCustomReplacement("_", "-").slugify(slug);
     }
 }
