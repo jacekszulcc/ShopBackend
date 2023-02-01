@@ -1,5 +1,6 @@
 package cc.szulc.shop.admin.product.model;
 
+import cc.szulc.shop.admin.category.model.AdminCategory;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,7 +20,7 @@ public class AdminProduct {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String category;
+    private Long categoryId;
     private String description;
     private String fullDescription;
     private BigDecimal price;
