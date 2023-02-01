@@ -1,4 +1,4 @@
-package cc.szulc.shop.admin.model;
+package cc.szulc.shop.admin.product.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

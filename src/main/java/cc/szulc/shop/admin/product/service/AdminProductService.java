@@ -1,7 +1,7 @@
-package cc.szulc.shop.admin.service;
+package cc.szulc.shop.admin.product.service;
 
-import cc.szulc.shop.admin.repository.AdminProductRepository;
-import cc.szulc.shop.admin.model.AdminProduct;
+import cc.szulc.shop.admin.product.model.AdminProduct;
+import cc.szulc.shop.admin.product.repository.AdminProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

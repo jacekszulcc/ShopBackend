@@ -1,6 +1,6 @@
-package cc.szulc.shop.admin.controller.dto;
+package cc.szulc.shop.admin.product.controller.dto;
 
-import cc.szulc.shop.admin.model.AdminProductCurrency;
+import cc.szulc.shop.admin.product.model.AdminProductCurrency;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

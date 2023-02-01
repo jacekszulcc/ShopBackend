@@ -1,16 +1,14 @@
-package cc.szulc.shop.admin.controller;
+package cc.szulc.shop.admin.product.controller;
 
-import cc.szulc.shop.admin.controller.dto.AdminProductDto;
-import cc.szulc.shop.admin.controller.dto.UploadResponse;
-import cc.szulc.shop.admin.service.AdminProductImageService;
-import cc.szulc.shop.admin.service.AdminProductService;
-import cc.szulc.shop.admin.model.AdminProduct;
+import cc.szulc.shop.admin.product.controller.dto.AdminProductDto;
+import cc.szulc.shop.admin.product.controller.dto.UploadResponse;
+import cc.szulc.shop.admin.product.service.AdminProductImageService;
+import cc.szulc.shop.admin.product.service.AdminProductService;
+import cc.szulc.shop.admin.product.model.AdminProduct;
 import com.github.slugify.Slugify;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
-import org.springframework.boot.autoconfigure.web.ServerProperties;
-import org.springframework.core.io.FileSystemResourceLoader;
 import org.springframework.core.io.Resource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -21,10 +19,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 
 @RestController
 @RequiredArgsConstructor

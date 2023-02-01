@@ -1,4 +1,4 @@
-package cc.szulc.shop.admin.service;
+package cc.szulc.shop.admin.product.service;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;

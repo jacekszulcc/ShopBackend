@@ -1,4 +1,4 @@
-package cc.szulc.shop.admin.service;
+package cc.szulc.shop.admin.product.service;
 
 import com.github.slugify.Slugify;
 import org.apache.commons.io.FilenameUtils;
