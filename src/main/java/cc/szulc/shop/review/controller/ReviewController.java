@@ -1,7 +1,7 @@
 package cc.szulc.shop.review.controller;
 
 import cc.szulc.shop.review.controller.dto.ReviewDto;
-import cc.szulc.shop.review.model.Review;
+import cc.szulc.shop.common.model.Review;
 import cc.szulc.shop.review.service.ReviewService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

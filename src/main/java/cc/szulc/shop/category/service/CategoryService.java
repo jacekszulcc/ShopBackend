@@ -1,11 +1,11 @@
 package cc.szulc.shop.category.service;
 
-import cc.szulc.shop.category.model.Category;
-import cc.szulc.shop.category.model.CategoryProductsDto;
+import cc.szulc.shop.common.model.Category;
+import cc.szulc.shop.category.dto.CategoryProductsDto;
 import cc.szulc.shop.category.repository.CategoryRepository;
-import cc.szulc.shop.product.controller.dto.ProductListDto;
-import cc.szulc.shop.product.model.Product;
-import cc.szulc.shop.product.repository.ProductRepository;
+import cc.szulc.shop.common.dto.ProductListDto;
+import cc.szulc.shop.common.model.Product;
+import cc.szulc.shop.common.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;

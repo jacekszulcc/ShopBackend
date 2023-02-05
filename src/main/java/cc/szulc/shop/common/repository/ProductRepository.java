@@ -1,7 +1,7 @@
-package cc.szulc.shop.product.repository;
+package cc.szulc.shop.common.repository;
 
 
-import cc.szulc.shop.product.model.Product;
+import cc.szulc.shop.common.model.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

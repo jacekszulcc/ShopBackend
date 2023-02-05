@@ -1,7 +1,7 @@
 package cc.szulc.shop.category.controller;
 
-import cc.szulc.shop.category.model.Category;
-import cc.szulc.shop.category.model.CategoryProductsDto;
+import cc.szulc.shop.common.model.Category;
+import cc.szulc.shop.category.dto.CategoryProductsDto;
 import cc.szulc.shop.category.service.CategoryService;
 import jakarta.validation.constraints.Pattern;
 import lombok.RequiredArgsConstructor;

@@ -1,6 +1,5 @@
-package cc.szulc.shop.product.model;
+package cc.szulc.shop.common.model;
 
-import cc.szulc.shop.review.model.Review;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

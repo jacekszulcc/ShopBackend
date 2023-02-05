@@ -1,5 +1,6 @@
-package cc.szulc.shop.admin.product.service;
+package cc.szulc.shop.admin.common.utils;
 
+import cc.szulc.shop.admin.common.utils.SlugifyUtils;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -18,7 +19,7 @@ class UploadedFilesNameUtilsTest {
             "Produkt__1.png, produkt-1.png"
     })
     void shouldSlugifyFileName(String in, String out) {
-        String fileName = UploadedFilesNameUtils.slugifyFileName(in);
+        String fileName = SlugifyUtils.slugifyFileName(in);
         assertEquals(fileName, out);
     }
 

@@ -1,7 +1,7 @@
 package cc.szulc.shop.product.service;
 
-import cc.szulc.shop.product.model.Product;
-import cc.szulc.shop.product.repository.ProductRepository;
+import cc.szulc.shop.common.model.Product;
+import cc.szulc.shop.common.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -1,8 +1,8 @@
 package cc.szulc.shop.product.controller;
 
-import cc.szulc.shop.product.controller.dto.ProductListDto;
+import cc.szulc.shop.common.dto.ProductListDto;
 import cc.szulc.shop.product.service.ProductService;
-import cc.szulc.shop.product.model.Product;
+import cc.szulc.shop.common.model.Product;
 import jakarta.validation.constraints.Pattern;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.validator.constraints.Length;

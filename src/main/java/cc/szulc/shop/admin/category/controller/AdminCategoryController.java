@@ -3,11 +3,12 @@ package cc.szulc.shop.admin.category.controller;
 import cc.szulc.shop.admin.category.controller.dto.AdminCategoryDto;
 import cc.szulc.shop.admin.category.model.AdminCategory;
 import cc.szulc.shop.admin.category.service.AdminCategoryService;
-import com.github.slugify.Slugify;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
+import static cc.szulc.shop.admin.common.utils.SlugifyUtils.slugifySlug;
 
 @RestController
 @RequestMapping("/admin/categories")
@@ -37,14 +38,10 @@ public class AdminCategoryController {
                 .id(id)
                 .name(adminCategoryDto.getName())
                 .description(adminCategoryDto.getDescription())
-                .slug(slugifyCategoryName(adminCategoryDto.getSlug()))
+                .slug(slugifySlug(adminCategoryDto.getSlug()))
                 .build();
     }
 
-    private String slugifyCategoryName(String slug) {
-        Slugify slugify = new Slugify();
-        return slugify.withCustomReplacement("_", "-").slugify(slug);
-    }
 
     @PutMapping("{id}")
     public AdminCategory updateCategory(@PathVariable Long id, @RequestBody AdminCategoryDto adminCategoryDto) {

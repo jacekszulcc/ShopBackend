@@ -1,4 +1,4 @@
-package cc.szulc.shop.review.model;
+package cc.szulc.shop.common.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package cc.szulc.shop.category.model;
+package cc.szulc.shop.common.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;

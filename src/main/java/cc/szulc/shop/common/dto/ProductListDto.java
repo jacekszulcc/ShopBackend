@@ -1,4 +1,4 @@
-package cc.szulc.shop.product.controller.dto;
+package cc.szulc.shop.common.dto;
 
 import lombok.Builder;
 import lombok.Getter;
