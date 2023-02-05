@@ -3,6 +3,7 @@ package cc.szulc.shop.product.controller;
 import cc.szulc.shop.common.dto.ProductListDto;
 import cc.szulc.shop.product.service.ProductService;
 import cc.szulc.shop.common.model.Product;
+import cc.szulc.shop.product.service.dto.ProductDto;
 import jakarta.validation.constraints.Pattern;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.validator.constraints.Length;
@@ -41,7 +42,7 @@ public class ProductController {
     }
 
     @GetMapping("/products/{slug}")
-    public Product getProductBySlug(
+    public ProductDto getProductBySlug(
             @PathVariable
                     @Pattern(regexp = "[a-z0-9\\-]+")
                     @Length(max = 255)

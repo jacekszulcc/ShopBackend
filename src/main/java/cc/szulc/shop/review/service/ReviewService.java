@@ -1,7 +1,7 @@
 package cc.szulc.shop.review.service;
 
 import cc.szulc.shop.common.model.Review;
-import cc.szulc.shop.review.repository.ReviewRepository;
+import cc.szulc.shop.common.repository.ReviewRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

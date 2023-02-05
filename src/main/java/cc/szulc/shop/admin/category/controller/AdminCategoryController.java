@@ -42,7 +42,6 @@ public class AdminCategoryController {
                 .build();
     }
 
-
     @PutMapping("{id}")
     public AdminCategory updateCategory(@PathVariable Long id, @RequestBody AdminCategoryDto adminCategoryDto) {
         return adminCategoryService.updateCategory(mapToAdminCategory(id, adminCategoryDto));

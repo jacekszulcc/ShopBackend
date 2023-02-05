@@ -1,6 +1,5 @@
 package cc.szulc.shop.admin.product.model;
 
-import cc.szulc.shop.admin.category.model.AdminCategory;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

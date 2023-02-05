@@ -1,9 +1,7 @@
 package cc.szulc.shop.admin.category.service;
 
-import cc.szulc.shop.admin.category.controller.dto.AdminCategoryDto;
 import cc.szulc.shop.admin.category.model.AdminCategory;
 import cc.szulc.shop.admin.category.repository.AdminCategoryRepository;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -67,8 +67,6 @@ public class AdminProductController {
         catch (IOException e) {
             throw new RuntimeException("Coś poszło źle podczas wgrywania pliku", e);
         }
-
-
     }
 
     @GetMapping("/data/productImage/{filename}")
