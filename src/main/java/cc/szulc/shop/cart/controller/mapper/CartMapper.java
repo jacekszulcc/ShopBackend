@@ -4,8 +4,8 @@ import cc.szulc.shop.cart.controller.dto.CartSummaryDto;
 import cc.szulc.shop.cart.controller.dto.CartSummaryItemDto;
 import cc.szulc.shop.cart.controller.dto.ProductDto;
 import cc.szulc.shop.cart.controller.dto.SummaryDto;
-import cc.szulc.shop.cart.model.Cart;
-import cc.szulc.shop.cart.model.CartItem;
+import cc.szulc.shop.common.model.Cart;
+import cc.szulc.shop.common.dto.CartItem;
 import cc.szulc.shop.common.model.Product;
 
 import java.math.BigDecimal;

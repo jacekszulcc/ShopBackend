@@ -1,9 +1,9 @@
 package cc.szulc.shop.cart.service;
 
-import cc.szulc.shop.cart.model.Cart;
-import cc.szulc.shop.cart.model.CartItem;
+import cc.szulc.shop.common.model.Cart;
+import cc.szulc.shop.common.dto.CartItem;
 import cc.szulc.shop.cart.model.dto.CartProductDto;
-import cc.szulc.shop.cart.repository.CartRepository;
+import cc.szulc.shop.common.repository.CartRepository;
 import cc.szulc.shop.common.model.Product;
 import cc.szulc.shop.common.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;

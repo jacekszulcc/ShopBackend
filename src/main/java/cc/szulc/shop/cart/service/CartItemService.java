@@ -1,6 +1,6 @@
 package cc.szulc.shop.cart.service;
 
-import cc.szulc.shop.cart.repository.CartItemRepository;
+import cc.szulc.shop.common.repository.CartItemRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

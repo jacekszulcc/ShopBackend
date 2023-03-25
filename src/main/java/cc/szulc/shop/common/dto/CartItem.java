@@ -1,4 +1,4 @@
-package cc.szulc.shop.cart.model;
+package cc.szulc.shop.common.dto;
 
 import cc.szulc.shop.common.model.Product;
 import jakarta.persistence.*;

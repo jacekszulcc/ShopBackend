@@ -1,6 +1,6 @@
-package cc.szulc.shop.cart.repository;
+package cc.szulc.shop.common.repository;
 
-import cc.szulc.shop.cart.model.Cart;
+import cc.szulc.shop.common.model.Cart;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -15,5 +15,7 @@ public interface CartRepository extends JpaRepository<Cart, Long> {
 
     @Query("delete from Cart c where c.id in (:ids)")
     @Modifying
-    void deleteAllByIdIn(List<Long> ids);
+    void deleteAllById(List<Long> ids);
+
+    void deleteCartById(Long cartId);
 }

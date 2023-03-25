@@ -1,8 +1,8 @@
 package cc.szulc.shop.cart.service;
 
-import cc.szulc.shop.cart.model.Cart;
-import cc.szulc.shop.cart.repository.CartItemRepository;
-import cc.szulc.shop.cart.repository.CartRepository;
+import cc.szulc.shop.common.model.Cart;
+import cc.szulc.shop.common.repository.CartItemRepository;
+import cc.szulc.shop.common.repository.CartRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -29,7 +29,7 @@ public class CartCleanupService {
                 .toList();
         if(!ids.isEmpty()){
             cartItemRepository.deleteAllByCartIdIn(ids);
-            cartRepository.deleteAllByIdIn(ids);
+            cartRepository.deleteAllById(ids);
         }
     }
 }

@@ -1,5 +1,6 @@
-package cc.szulc.shop.cart.model;
+package cc.szulc.shop.common.model;
 
+import cc.szulc.shop.common.dto.CartItem;
 import jakarta.persistence.*;
 import lombok.*;
 
