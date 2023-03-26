@@ -1,6 +1,7 @@
 package cc.szulc.shop.order.service;
 
 import cc.szulc.shop.common.dto.CartItem;
+import cc.szulc.shop.common.mail.EmailClientService;
 import cc.szulc.shop.common.model.Cart;
 import cc.szulc.shop.common.repository.CartItemRepository;
 import cc.szulc.shop.common.repository.CartRepository;
@@ -21,6 +22,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @Service
@@ -33,6 +35,7 @@ public class OrderService {
     private final OrderRowRepository orderRowRepository;
     private final ShipmentRepository shipmentRepository;
     private final PaymentRepository paymentRepository;
+    private final EmailClientService emailClientService;
 
     @Transactional
     public OrderSummary placeOrder(OrderDto orderDto) {
@@ -57,7 +60,7 @@ public class OrderService {
         saveOrderRows(cart, newOrder.getId(), shipment);
         cartItemRepository.deleteByCartId(orderDto.getCartId());
         cartRepository.deleteCartById(orderDto.getCartId());
-
+        emailClientService.getInstance().send(order.getEmail(), "Twoje zamówienie zostało przyjęte", createEmailMessage(order));
         return OrderSummary.builder()
                 .id(newOrder.getId())
                 .placeDate(newOrder.getPlaceDate())
@@ -65,6 +68,16 @@ public class OrderService {
                 .grossValue(newOrder.getGrossValue())
                 .payment(payment)
                 .build();
+    }
+
+    private String createEmailMessage(Order order) {
+        return "Twoje zamówienie o id: " + order.getId() +
+                "\nData złożenia: " + order.getPlaceDate().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")) +
+                "\nWartość: " + order.getGrossValue() + " PLN" +
+                "\n\n" +
+                "\nPłatność: " + order.getPayment().getName() +
+                (order.getPayment().getNote() != null ? "\n" + order.getPayment().getNote() : "") +
+                "\n\nDziękujemy za zakupy.";
     }
 
     private BigDecimal calculateGrossValue(List<CartItem> items, Shipment shipment) {
