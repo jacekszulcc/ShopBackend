@@ -16,5 +16,4 @@ public class ShipmentService {
         return shipmentRepository.findAll();
     }
 
-
 }
