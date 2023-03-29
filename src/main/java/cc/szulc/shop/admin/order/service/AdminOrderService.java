@@ -49,13 +49,16 @@ public class AdminOrderService {
 
     private void patchValues(AdminOrder adminOrder, Map<String, String> values) {
         if(values.get("orderStatus") != null){
-            processOrderStatus(adminOrder, values);
+            processOrderStatusChange(adminOrder, values);
         }
     }
 
-    private void processOrderStatus(AdminOrder adminOrder, Map<String, String> values) {
+    private void processOrderStatusChange(AdminOrder adminOrder, Map<String, String> values) {
         AdminOrderStatus oldStatus = adminOrder.getOrderStatus();
         AdminOrderStatus newStatus = AdminOrderStatus.valueOf(values.get("orderStatus"));
+        if(oldStatus == newStatus){
+            return;
+        }
         adminOrder.setOrderStatus(newStatus);
         logStatusChange(adminOrder.getId(), oldStatus, newStatus);
         emailNotificationForStatusChange.sendEmailNotification(newStatus, adminOrder);
