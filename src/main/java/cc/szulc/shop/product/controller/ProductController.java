@@ -4,7 +4,6 @@ import cc.szulc.shop.common.dto.ProductListDto;
 import cc.szulc.shop.product.service.ProductService;
 import cc.szulc.shop.common.model.Product;
 import cc.szulc.shop.product.service.dto.ProductDto;
-import jakarta.validation.constraints.Pattern;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.data.domain.Page;
@@ -15,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.constraints.Pattern;
 import java.util.List;
 
 @RestController

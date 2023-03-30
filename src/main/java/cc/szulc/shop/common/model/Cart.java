@@ -1,9 +1,15 @@
 package cc.szulc.shop.common.model;
 
 import cc.szulc.shop.common.dto.CartItem;
-import jakarta.persistence.*;
 import lombok.*;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;

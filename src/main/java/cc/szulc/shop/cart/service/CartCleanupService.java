@@ -3,12 +3,12 @@ package cc.szulc.shop.cart.service;
 import cc.szulc.shop.common.model.Cart;
 import cc.szulc.shop.common.repository.CartItemRepository;
 import cc.szulc.shop.common.repository.CartRepository;
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 import java.util.List;
 

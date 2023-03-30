@@ -1,8 +1,13 @@
 package cc.szulc.shop.common.dto;
 
 import cc.szulc.shop.common.model.Product;
-import jakarta.persistence.*;
 import lombok.*;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 @Getter

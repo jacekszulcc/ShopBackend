@@ -16,10 +16,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDateTime;
 import java.util.Map;
 
-import static cc.szulc.shop.admin.order.service.AdminOrderEmailMessage.createProcessingEmailMessage;
-import static cc.szulc.shop.admin.order.service.AdminOrderEmailMessage.createCompletedEmailMessage;
-import static cc.szulc.shop.admin.order.service.AdminOrderEmailMessage.createRefundEmailMessage;
-
 @Service
 @RequiredArgsConstructor
 public class AdminOrderService {
