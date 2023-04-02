@@ -7,7 +7,7 @@ import cc.szulc.shop.common.model.Cart;
 import cc.szulc.shop.common.model.Product;
 import cc.szulc.shop.common.repository.CartItemRepository;
 import cc.szulc.shop.common.repository.CartRepository;
-import cc.szulc.shop.order.model.OrderStatus;
+import cc.szulc.shop.common.model.OrderStatus;
 import cc.szulc.shop.order.model.Payment;
 import cc.szulc.shop.order.model.PaymentType;
 import cc.szulc.shop.order.model.Shipment;

@@ -1,9 +1,9 @@
 package cc.szulc.shop.admin.order.service;
 
 import cc.szulc.shop.admin.order.model.AdminOrder;
-import cc.szulc.shop.admin.order.model.AdminOrderStatus;
 import cc.szulc.shop.admin.order.model.dto.AdminOrderStats;
 import cc.szulc.shop.admin.order.repository.AdminOrderRepository;
+import cc.szulc.shop.common.model.OrderStatus;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -27,7 +27,7 @@ public class AdminOrderStatsService {
         List<AdminOrder> orders = orderRepository.findAllByPlaceDateIsBetweenAndOrderStatus(
                 from,
                 to,
-                AdminOrderStatus.COMPLETED
+                OrderStatus.COMPLETED
         );
         TreeMap<Integer, AdminOrderStatsValue> result = IntStream.rangeClosed(from.getDayOfMonth(), to.getDayOfMonth())
                 .boxed()

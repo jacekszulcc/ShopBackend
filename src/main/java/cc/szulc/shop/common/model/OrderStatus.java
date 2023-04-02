@@ -1,8 +1,6 @@
-package cc.szulc.shop.admin.order.model;
+package cc.szulc.shop.common.model;
 
-import lombok.Getter;
-
-public enum AdminOrderStatus {
+public enum OrderStatus {
     NEW("Nowe"),
     PAID("Opłacone"),
     PROCESSING("Przetwarzane"),
@@ -13,7 +11,7 @@ public enum AdminOrderStatus {
 
     private String value;
 
-    AdminOrderStatus(String value) {
+    OrderStatus(String value) {
         this.value = value;
     }
 
@@ -21,4 +19,3 @@ public enum AdminOrderStatus {
         return value;
     }
 }
-

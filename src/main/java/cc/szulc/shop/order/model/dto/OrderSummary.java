@@ -1,6 +1,6 @@
 package cc.szulc.shop.order.model.dto;
 
-import cc.szulc.shop.order.model.OrderStatus;
+import cc.szulc.shop.common.model.OrderStatus;
 import cc.szulc.shop.order.model.Payment;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

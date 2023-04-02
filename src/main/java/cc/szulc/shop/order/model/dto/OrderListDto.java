@@ -1,18 +1,17 @@
-package cc.szulc.shop.admin.order.controller.dto;
+package cc.szulc.shop.order.model.dto;
 
 import cc.szulc.shop.common.model.OrderStatus;
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Getter
-@Builder
-public class AdminOrderDto {
+@AllArgsConstructor
+public class OrderListDto {
     private Long id;
     private LocalDateTime placeDate;
-    private OrderStatus orderStatus;
+    private String orderStatus;
     private BigDecimal grossValue;
 }
-

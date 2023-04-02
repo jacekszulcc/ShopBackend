@@ -1,5 +1,6 @@
 package cc.szulc.shop.order.model;
 
+import cc.szulc.shop.common.model.OrderStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

@@ -1,7 +1,9 @@
 package cc.szulc.shop.order.controller;
 
+import cc.szulc.shop.order.model.Order;
 import cc.szulc.shop.order.model.dto.InitOrder;
 import cc.szulc.shop.order.model.dto.OrderDto;
+import cc.szulc.shop.order.model.dto.OrderListDto;
 import cc.szulc.shop.order.model.dto.OrderSummary;
 import cc.szulc.shop.order.service.OrderService;
 import cc.szulc.shop.order.service.PaymentService;
@@ -13,6 +15,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -34,6 +38,14 @@ public class OrderController {
                 .shipment(shipmentService.getShipments())
                 .payment(paymentService.getPayments())
                 .build();
+    }
+
+    @GetMapping
+    public List<OrderListDto> getOrders(@AuthenticationPrincipal Long userId){
+        if(userId == null){
+            throw new IllegalArgumentException("Brak użytkownika");
+        }
+        return orderService.getOrdersForCustomer(userId);
     }
 
 }

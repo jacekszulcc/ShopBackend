@@ -4,8 +4,8 @@ import cc.szulc.shop.admin.order.controller.dto.AdminInitDataDto;
 import cc.szulc.shop.admin.order.controller.dto.AdminOrderDto;
 import cc.szulc.shop.admin.order.controller.mapper.AdminOrderMapper;
 import cc.szulc.shop.admin.order.model.AdminOrder;
-import cc.szulc.shop.admin.order.model.AdminOrderStatus;
 import cc.szulc.shop.admin.order.service.AdminOrderService;
+import cc.szulc.shop.common.model.OrderStatus;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -48,7 +48,7 @@ public class AdminOrderController {
 
     private Map<String, String> createOrderStatusesMap() {
         HashMap<String, String> statuses = new HashMap<>();
-        for (AdminOrderStatus value : AdminOrderStatus.values()) {
+        for (OrderStatus value : OrderStatus.values()) {
             statuses.put(value.name(), value.getValue());
         }
         return statuses;

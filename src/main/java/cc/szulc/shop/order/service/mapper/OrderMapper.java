@@ -4,7 +4,7 @@ import cc.szulc.shop.common.dto.CartItem;
 import cc.szulc.shop.common.model.Cart;
 import cc.szulc.shop.order.model.Order;
 import cc.szulc.shop.order.model.OrderRow;
-import cc.szulc.shop.order.model.OrderStatus;
+import cc.szulc.shop.common.model.OrderStatus;
 import cc.szulc.shop.order.model.Payment;
 import cc.szulc.shop.order.model.Shipment;
 import cc.szulc.shop.order.model.dto.OrderDto;

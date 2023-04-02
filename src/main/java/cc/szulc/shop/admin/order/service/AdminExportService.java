@@ -1,8 +1,8 @@
 package cc.szulc.shop.admin.order.service;
 
 import cc.szulc.shop.admin.order.model.AdminOrder;
-import cc.szulc.shop.admin.order.model.AdminOrderStatus;
 import cc.szulc.shop.admin.order.repository.AdminOrderRepository;
+import cc.szulc.shop.common.model.OrderStatus;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ public class AdminExportService {
 
     private final AdminOrderRepository orderRepository;
 
-    public List<AdminOrder> exportOrders(LocalDateTime from, LocalDateTime to, AdminOrderStatus orderStatus) {
+    public List<AdminOrder> exportOrders(LocalDateTime from, LocalDateTime to, OrderStatus orderStatus) {
         return orderRepository.findAllByPlaceDateIsBetweenAndOrderStatus(from, to, orderStatus);
     }
 }
